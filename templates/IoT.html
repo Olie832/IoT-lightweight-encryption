@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Automation Control</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function turnOnLED() {
+            $.ajax({
+                url: '/led/on',
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        function turnOffLED() {
+            $.ajax({
+                url: '/led/off',
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Home Automation Control</h2>
+    
+    <div>
+        <h3>Light Control</h3>
+        <button onclick="turnOnLED()">Turn On LED</button>
+        <button onclick="turnOffLED()">Turn Off LED</button>
+    </div>
+    
+    <div>
+        <h3>Main Door Control</h3>
+        <button onclick="alert('Main Door control not implemented')">Lock Main Door</button>
+        <button onclick="alert('Main Door control not implemented')">Unlock Main Door</button>
+    </div>
+    
+    <div>
+        <h3>Cameras Control</h3>
+        <button onclick="alert('Cameras control not implemented')">Turn On Cameras</button>
+        <button onclick="alert('Cameras control not implemented')">Turn Off Cameras</button>
+    </div>
+    
+    <div>
+        <h3>Main Gate Control</h3>
+        <button onclick="alert('Main Gate control not implemented')">Lock Main Main Gate</button>
+        <button onclick="alert('Main Gate control not implemented')">Unlock Main Main Gate</button>
+    </div>
+    
+    <div>
+        <h3>Heating Control</h3>
+        <button onclick="alert('Heating control not implemented')">Control Heating</button>
+    </div>
+    
+    <div>
+        <h3>Cooker Control</h3>
+        <button onclick="alert('Cooker control not implemented')">Turn on Cooker</button>
+        <button onclick="alert('Cooker control not implemented')">Turn off Cooker</button>
+    </div>
+    
+</body>
+</html>
